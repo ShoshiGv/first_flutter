@@ -54,11 +54,48 @@ import 'package:book_app/model/model.dart';
                                 topRight: borderRadius.circular(50),
                             ),//BorderRadius
                         ),//BoxDecoration
-                        
+                        child: padding(
+                            padding: EdgeInsets.all(35),
+                            child:Collumn(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:[
+                                    Text(book.title,
+                                    style: TextStyle(
+                                        fontSize: 33,
+                                        fontWeight: FontWeight.bold,
+                                        color: colors.black,
+                                    ),//TextStyle
+                                    ),//Text
+                                    Text(
+                                        book.author,
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            color: colors.black45,
+                                        ),//TextStyle
+                                    ),//Text
+                                    SizeBox(height:25),
+                                    Text(
+                                        "Book Description",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: colors.black,
+                                            fontSize:25,
+                                        ),//TextStyle
+                                    ),//Text
+                                    
+                                    Text(
+                                        book.description,
+                                        style: TextStyle(
+                                            color: colors.black,
+                                            height: 1.5,
+                                            fontSize: 18,),//TextStyle
+                                            ),//Text
+                                ],
+                            ),//Collumn
+                        ),//padding
                     ),//Container
                 ),//extend
             ],
-
         ),//column
         );//Scaffold
     }
